@@ -1,28 +1,28 @@
 public class Sudoku {
     public static void main(String[] args) {
-//        int n[][] = {
-//            {5,3,4,6,7,8,9,1,2},
-//            {6,7,2,1,9,5,3,4,8},
-//            {1,9,8,3,4,2,5,6,7},
-//            {8,5,9,7,6,1,4,2,3},
-//            {4,2,6,8,5,3,7,9,1}, 
-//            {7,1,3,9,2,4,8,5,6}, 
-//            {9,6,1,5,3,7,2,8,4},
-//            {2,8,7,4,1,9,6,3,5}, 
-//            {3,4,5,2,8,6,1,7,9}, 
-//        };
-
-        int[][] n = {
-            {5,3,4,6,7,5,9,1,2},
-            {6,7,2,1,9,5,6,4,8},
+        int n[][] = {
+            {5,3,4,6,7,8,9,1,2},
+            {6,7,2,1,9,5,3,4,8},
             {1,9,8,3,4,2,5,6,7},
-            {8,5,9,7,9,1,4,2,3},
-            {4,2,6,8,4,3,7,9,1},
-            {5,1,3,9,2,4,8,5,6},
+            {8,5,9,7,6,1,4,2,3},
+            {4,2,6,8,5,3,7,9,1}, 
+            {7,1,3,9,2,4,8,5,6}, 
             {9,6,1,5,3,7,2,8,4},
-            {2,8,7,4,8,9,6,3,5},
-            {3,4,5,2,8,6,1,7,9}
-        };//low over
+            {2,8,7,4,1,9,6,3,5}, 
+            {3,4,5,2,8,6,1,7,9}, 
+        };
+
+//        int[][] n = {
+//            {5,3,4,6,7,5,9,1,2},
+//            {6,7,2,1,9,5,6,4,8},
+//            {1,9,8,3,4,2,5,6,7},
+//            {8,5,9,7,9,1,4,2,3},
+//            {4,2,6,8,4,3,7,9,1},
+//            {5,1,3,9,2,4,8,5,6},
+//            {9,6,1,5,3,7,2,8,4},
+//            {2,8,7,4,8,9,6,3,5},
+//            {3,4,5,2,8,6,1,7,9}
+//        };//low over
 //        int[][] n = {
 //            {5,3,4,6,7,8,9,1,2},
 //            {6,7,2,1,9,5,3,4,8},
@@ -34,12 +34,8 @@ public class Sudoku {
 //            {2,8,7,4,1,9,6,3,5}, 
 //            {3,4,5,2,8,6,1,7,9},
 //        };//column over
-        
- 
-
-
-        int[] arr = new int[8];
-        System.out.println("Sudoku :");
+       
+//        System.out.println("Sudoku :");
 //        for( int i = 0; i < n.length; i++){
 //            for(int j = 0; j < n[0].length; j++){
 //                System.out.print(n[i][j]+" ");
@@ -69,9 +65,9 @@ public class Sudoku {
                 int value = n[i][j];
                 if (check[value]) {
                     hasDuplicaterow = true;
-                    System.out.println("Sudoku It game Over");
-//                    System.out.println("❌ Duplicate number " + value + " found in row " + i);
-                    return;
+                    System.out.println("ROW: "+i+" Column : "+j+"");
+//                    System.out.println("Sudoku It game Over");
+//                    return ;
                 }
                 check[value] = true;
             }//end for j
@@ -86,15 +82,14 @@ public class Sudoku {
         for (int j2 = 0; j2 < n[0].length; j2++) {
             boolean[] check2 = new boolean[10]; 
 //            System.out.print("i="+i+"\n");
-            
-
             for (int i2 = 0; i2 < n.length; i2++) {
 //                System.out.print(n[i2][j2]+" \n");
                 int value = n[i2][j2];
                 if (check2[value]) {
                     hasDuplicateColumn = true;
-                    System.out.println("Sudoku It game Over");
-                    return;
+                    System.out.println("ROW:"+i2+"Column"+j2+"");
+//                    System.out.println("Sudoku It game Over");
+//                    return;
                 }
                 check2[value] = true;
             }//end for j
