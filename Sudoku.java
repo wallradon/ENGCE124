@@ -1,174 +1,156 @@
-public class AddSudokuTo4D {
+public class sudokuAJ {
     public static void main(String[] args) {
-        int[][][][] array4D = new int[3][3][3][3];  //[brกล่องแนวนอน][bcกล่องแนวตั้ง][irของแนวนอน][icของแนวตั้ง]
 
-        // Block [0][0]
-        array4D[0][0][0][0] = 5;  array4D[0][0][0][1] = 3;  array4D[0][0][0][2] = 4;
-        array4D[0][0][1][0] = 6;  array4D[0][0][1][1] = 7;  array4D[0][0][1][2] = 2;
-        array4D[0][0][2][0] = 1;  array4D[0][0][2][1] = 9;  array4D[0][0][2][2] = 8;
-
-        // Block [0][1]
-        array4D[0][1][0][0] = 6;  array4D[0][1][0][1] = 7;  array4D[0][1][0][2] = 8;
-        array4D[0][1][1][0] = 1;  array4D[0][1][1][1] = 9;  array4D[0][1][1][2] = 5;
-        array4D[0][1][2][0] = 3;  array4D[0][1][2][1] = 4;  array4D[0][1][2][2] = 2;
-
-        // Block [0][2]
-        array4D[0][2][0][0] = 9;  array4D[0][2][0][1] = 1;  array4D[0][2][0][2] = 2;
-        array4D[0][2][1][0] = 3;  array4D[0][2][1][1] = 4;  array4D[0][2][1][2] = 8;
-        array4D[0][2][2][0] = 5;  array4D[0][2][2][1] = 6;  array4D[0][2][2][2] = 7;
-
-        // Block [1][0]
-        array4D[1][0][0][0] = 8;  array4D[1][0][0][1] = 5;  array4D[1][0][0][2] = 9;
-        array4D[1][0][1][0] = 4;  array4D[1][0][1][1] = 2;  array4D[1][0][1][2] = 6;
-        array4D[1][0][2][0] = 7;  array4D[1][0][2][1] = 1;  array4D[1][0][2][2] = 3;
-
-        // Block [1][1]
-        array4D[1][1][0][0] = 7;  array4D[1][1][0][1] = 6;  array4D[1][1][0][2] = 1;
-        array4D[1][1][1][0] = 8;  array4D[1][1][1][1] = 5;  array4D[1][1][1][2] = 3;
-        array4D[1][1][2][0] = 9;  array4D[1][1][2][1] = 2;  array4D[1][1][2][2] = 4;
-
-        // Block [1][2]
-        array4D[1][2][0][0] = 4;  array4D[1][2][0][1] = 2;  array4D[1][2][0][2] = 3;
-        array4D[1][2][1][0] = 7;  array4D[1][2][1][1] = 9;  array4D[1][2][1][2] = 1;
-        array4D[1][2][2][0] = 8;  array4D[1][2][2][1] = 5;  array4D[1][2][2][2] = 6;
-
-        // Block [2][0]
-        array4D[2][0][0][0] = 9;  array4D[2][0][0][1] = 6;  array4D[2][0][0][2] = 1;
-        array4D[2][0][1][0] = 2;  array4D[2][0][1][1] = 8;  array4D[2][0][1][2] = 7;
-        array4D[2][0][2][0] = 3;  array4D[2][0][2][1] = 4;  array4D[2][0][2][2] = 5;
-
-        // Block [2][1]
-        array4D[2][1][0][0] = 5;  array4D[2][1][0][1] = 3;  array4D[2][1][0][2] = 7;
-        array4D[2][1][1][0] = 4;  array4D[2][1][1][1] = 1;  array4D[2][1][1][2] = 9;
-        array4D[2][1][2][0] = 2;  array4D[2][1][2][1] = 5;  array4D[2][1][2][2] = 6;
-
-        // Block [2][2]
-        array4D[2][2][0][0] = 2;  array4D[2][2][0][1] = 8;  array4D[2][2][0][2] = 4;
-        array4D[2][2][1][0] = 6;  array4D[2][2][1][1] = 3;  array4D[2][2][1][2] = 5;
-        array4D[2][2][2][0] = 1;  array4D[2][2][2][1] = 7;  array4D[2][2][2][2] = 9;
-    
-        // for ( int br = 0 ; br < 3 ; br++ ) { //0-2
-        //     for ( int bc = 0 ; bc < 3 ; bc++ ) { //0-2
-        //         System.out.println("Block [" + br + "][" + bc + "]:");
-        //         for (int ir = 0 ; ir < 3 ; ir++) {
-        //             for (int ic = 0 ; ic < 3 ; ic++) {
-        //                 // System.out.println("4D: [" + br + "][" + bc + "][" + ir + "][" + ic + "]");
-        //                 System.out.print(array4D[br][bc][ir][ic] + " ");
-        //             }
-        //             System.out.println();
-        //         }
-        //         System.out.println();
+        // int[][][][] array4D = {
+        //     {   // row block 0
+        //         { {5,3,4}, {6,7,8}, {9,1,2} },
+        //         { {6,7,2}, {1,9,5}, {3,4,8} },
+        //         { {1,9,8}, {3,4,2}, {5,6,7} }
+        //     },
+        //     {   // row block 1
+        //         { {8,5,9}, {7,6,1}, {4,2,3} },
+        //         { {4,2,6}, {8,5,3}, {7,9,1} },
+        //         { {7,1,3}, {9,2,4}, {8,5,6} }
+        //     },
+        //     {   // row block 2
+        //         { {9,6,1}, {5,3,7}, {2,8,4} },
+        //         { {2,8,7}, {4,1,9}, {6,3,5} },
+        //         { {3,4,5}, {2,8,6}, {1,7,9} }
         //     }
-        // }
-
-                
-        System.out.println("------------------");
-        for (int i = 0; i < 9; i++) {
-            if (i % 3 == 0 && i != 0) {
-                System.out.println("------------------");
+        // } ;
+        // int[][][][] array4D = {
+        //     { // Block Row 0
+        //         { {5,3,4}, {6,7,8}, {9,1,2} }, // Block Col 0,1,2
+        //         { {6,7,2}, {1,9,5}, {3,4,8} },
+        //         { {1,9,8}, {3,4,2}, {5,6,7} }
+        //     },
+        //     { // Block Row 1
+        //         { {8,5,9}, {7,6,1}, {4,2,3} },
+        //         { {4,2,6}, {8,5,3}, {7,9,1} },
+        //         { {7,1,3}, {9,2,4}, {8,5,6} }
+        //     },
+        //     { // Block Row 2
+        //         { {9,6,1}, {5,3,7}, {2,8,4} },
+        //         { {2,8,7}, {4,1,9}, {6,3,5} },
+        //         { {3,4,5}, {2,8,6}, {1,7,9} }
+        //     }
+        // };
+        int[][][][] array4D = {
+            {
+                { {5,3,4}, {6,7,2}, {1,9,8} } ,  // block (0,0)
+                { {6,7,8}, {1,9,5}, {3,4,2} } ,  // block (0,1)
+                { {9,1,2}, {3,4,8}, {5,6,7} }   // block (0,2)
+            },
+            {
+                { {8,5,9}, {4,2,6}, {7,1,3} } ,  // block (1,0)
+                { {7,6,1}, {8,5,3}, {9,2,4} } ,  // block (1,1)
+                { {4,2,3}, {7,9,1}, {8,5,6} }   // block (1,2)
+            },
+            {
+                { {9,6,1}, {2,8,7}, {3,4,5} },  // block (2,0)
+                { {5,3,7}, {4,1,9}, {2,8,6} },  // block (2,1)
+                { {2,8,4}, {6,3,5}, {1,7,9} }   // block (2,2)
             }
-
-            for (int j = 0; j < 9; j++) {
-                if (j % 3 == 0 && j != 0) {
-                    System.out.print("|");
+        };
+        
+        int boxpass = 0, rowpass = 0, colpass = 0 ;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (chackbox(array4D, i, j)) {
+                    boxpass++ ; 
                 }
-
-                // คำนวณ index สำหรับ 4D
-                int br = i / 3;
-                int bc = j / 3;
-                int ir = i % 3;
-                int ic = j % 3;
-
-                System.out.print(array4D[br][bc][ir][ic] + " ");
             }
-            System.out.println();
         }
-        System.out.println("------------------");
+        System.out.println("Total passed boxes: " + boxpass + " / 9");
+
+        for( int r = 0 ; r < 3 ; r++ ){
+            rowpass += chackRow(array4D, r) ;
+        }
+        System.out.println("Total passed rowes: " + rowpass + " / 9");
+       
+        for( int c = 0 ; c < 9 ; c++ ){
+            colpass += checkCol(array4D, c) ;
+        }
+        System.out.println("Total passed Cols: " + colpass + " / 9") ;
 
         
-
-        //box3x3
-        System.out.println("\nCheck Box:") ;
-        boolean hasDuplicaterow = false;
-        for ( int br = 0 ; br < 3 ; br++ ) { 
-            for ( int bc = 0 ; bc < 3 ; bc++ ) {
-                boolean[] check = new boolean[10];      
-                for (int ir = 0 ; ir < 3 ; ir++) {
-                    for (int ic = 0 ; ic < 3 ; ic++) {
-                        int value = array4D[br][bc][ir][ic] ;
-                        if (check[value]) {
-                            hasDuplicaterow = true;
-                            System.out.println("Block[" + (br+1) + "][" + (bc+1) + "] has duplicate value: " + value) ;
-                        }
-                        check[value] = true;
-                    }//end if ic
-                }//end if ir
-            }//end if bc
-        }//end if br
-        if (!hasDuplicaterow) {
-            System.out.println("Pass");
-        }//end if
-
-        int[][] sudoku = new int[9][9];
-
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                int br = i / 3 ;
-                int bc = j / 3 ; 
-                int ir = i % 3 ;
-                int ic = j % 3 ;
-                sudoku[i][j] = array4D[br][bc][ir][ic] ;
-            }//end for j
-        }//end for i
-
-        //row
-        System.out.println("\nCheck row:");
-        boolean hasDuplicaterow2d = false;
-        for (int i = 0; i < sudoku.length; i++) {
-            boolean[] check = new boolean[10];             
-            for (int j = 0; j < sudoku[0].length; j++) {
-                int value = sudoku[i][j];
-                if (check[value]) {
-                    hasDuplicaterow2d = true;
-                    System.out.print("Duplicate In ");
-                    System.out.println("Row[" + (i+1) + "] has duplicate value: " + value) ;
-                }
-                check[value] = true;
-            }//end for j
-        }//end for i
-        if (!hasDuplicaterow2d) {
-                System.out.println("Pass");
-        }//end if
+        if(boxpass == 9 && rowpass == 9 && colpass == 9 ) {
+            System.out.println("Game finisssssssssssssss") ;
+        } else {
+            System.out.println("Game Error");
+        }
         
-        //Column
-        System.out.println("\nCheck Column:");
-        boolean hasDuplicateColumn2d = false;
-        for (int j2 = 0; j2 < sudoku[0].length; j2++) {
-            boolean[] check2 = new boolean[10]; 
-            for (int i2 = 0; i2 < sudoku.length; i2++) {
-                int value = sudoku[i2][j2];
-                if (check2[value]) {
-                    hasDuplicateColumn2d = true;
-                    System.out.print("Duplicate In ");
-                    System.out.println("Column[" + (j2+1) + "] has duplicate value: " + value) ;
-
-                }
-                check2[value] = true;
-            }//end for j
-        }//end for i
-        if (!hasDuplicateColumn2d) {
-                System.out.println("Pass");
-        }//end if
-
-        
-
-
-
-
-
-
-
-
     }//end main
 
+    static boolean chackbox(int n[][][][], int rb, int cb){
+        boolean hasDuplicaterow = false ;
+        boolean[] check = new boolean[10] ;
+        for (int i = 0 ; i < 3 ; i++) {
+            for (int j = 0 ; j < 3 ; j++) {
+                int value = n[rb][cb][i][j] ;
+                if (check[value]) {
+                    hasDuplicaterow = true ;
+                    System.out.println("Block[" + (rb+1) + "][" + (cb+1) + "] has duplicate value: " + value) ;
+                }
+                check[value] = true;
+            }//end if j
+        }//end if i
+
+        if (!hasDuplicaterow) {
+            return true ;  
+        } else {
+            return false ; 
+        }
+    }
+    
+    static int chackRow(int n[][][][], int r ) {   
+        int count = 0 ;
+        for( int rs = 0 ; rs < 3 ; rs++ ) {
+
+            int[] row = new int[9] ;
+            int index = 0 ;
+
+            for( int i = 0 ; i<n[r].length ; i++ ) {
+
+                for( int j = 0 ; j<n[r][i].length ; j++ ) {
+
+                    int value = n[r][i][rs][j] ;
+                    row[index++] = value ;
+
+                }//end for j
+
+            }//end for i
+            count += check_rb(row) ; 
+        }//end for rs
+        return count ;
+        
+    }//end function
+
+    static int checkCol(int[][][][] n, int c) {
+        int[] col = new int[9] ;  // เก็บค่าทั้งคอลัมน์
+        int blockCol = c / 3 ;    // ตำแหน่งของ column block (0-2)
+        int cellCol = c % 3 ;     // ตำแหน่งของ cell ใน block (0-2)
+        int index = 0 ;
+    
+        for (int blockRow = 0; blockRow < 3; blockRow++) {
+            for (int cellRow = 0; cellRow < 3; cellRow++) {
+                col[index++] = n[blockRow][blockCol][cellRow][cellCol];
+            }
+        }
+    
+        return check_rb(col);  // คืน 1 ถ้าไม่มีตัวซ้ำ, 0 ถ้ามีตัวซ้ำ
+    }    
+    
+    static int check_rb(int[] number) {
+        boolean[] check = new boolean[10]; // index 1-9 ใช้ตรวจซ้ำ
+        boolean hasDuplicate = false;
+        for (int v : number) {
+            if (v < 1 || v > 9 || check[v]) {
+                hasDuplicate = true;
+            }
+            check[v] = true;
+        }
+        return hasDuplicate ? 0 : 1;
+    }
+    
 }//end class
