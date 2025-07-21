@@ -54,6 +54,7 @@ public class Queue {
                         }//end if
                     }//end if
                 }//end if
+                System.out.println("Booking Queue : " + data.queue_id) ;
 
             } else if (cmd.equalsIgnoreCase("cancel")) {
 
@@ -80,6 +81,7 @@ public class Queue {
                     ast.remove(num_queue); //remove data set 
                     act.remove(num_queue); //remove data coll 
                 }else{
+                        list_temp.delete(num_queue) ;
                         ast.remove(num_queue); //remove data set 
                         act.remove(num_queue); //remove data coll  
                 }//end if
@@ -93,12 +95,12 @@ public class Queue {
                 System.out.println("data in List_Temp");
                 list_temp.show(); //show duoble booling
                 System.out.println();
-                System.out.println("data in set:");
-                ast.show() ;//show set
-                System.out.println();
-                System.out.println("data in Collection") ;
-                act.show();//show collection
-                System.out.println();
+//                System.out.println("data in set:");
+//                ast.show() ;//show set
+//                System.out.println();
+//                System.out.println("data in Collection") ;
+//                act.show();//show collection
+//                System.out.println();
                 System.out.println("------------------------------------------------");
             } else if (cmd.equalsIgnoreCase("exit")) {
                 System.out.println("Exit Program");
