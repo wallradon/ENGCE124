@@ -1,4 +1,5 @@
-package  My_Project ;
+package  queue ;
+
 
 import java.util.Arrays;
 
@@ -58,13 +59,13 @@ public class ArrayCollection {
         return count ; // can not search  
     }
     
-     void show() {
+    void show() {
         for (int i = 0 ; i < count; i++) {
             System.out.println("Queue: " + arr[i].queue_id
                     + ", Name: " + arr[i].name
                     + ", Table: " + arr[i].number_table
                     + ", Date: " + arr[i].date
-                    + ", Time: " + arr[i].time) ;
+                    + ", Time: " + arr[i].time ) ;
         }
     }
 

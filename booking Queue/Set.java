@@ -1,4 +1,4 @@
-package  My_Project ;
+package  queue ;
 
 import java.util.Arrays;
 
@@ -19,7 +19,7 @@ public class Set {
     
 
     int add(inputdata item) {
-        int i = search(item);
+        int i = searchDuplicate(item);
 
         if (i == 0) {//dupilcate data
             return i ; //can not add data
@@ -36,16 +36,39 @@ public class Set {
     }//end function
 
     void remove(String queue_id) {
-        for (int i = 0; i < count; i++) {
-            if (arr[i].queue_id.equals(queue_id)) {
-                arr[i] = arr[count - 1]; // สลับตัวท้ายมาแทน
-                count--;
-                return;
-            } //end if
-        } //end for
+        
+        int index = search(queue_id);
+        if (index < arr.length) {
+            arr[index] = arr[count - 1];
+            count--;
+        }
+
     }//end function
 
-    int search(inputdata x) {
+
+    int search(String id) {//sentinel
+        inputdata temp = new inputdata() ;      
+        temp.queue_id = id ;
+
+        if (count == arr.length) {
+            arr = Arrays.copyOf(arr, arr.length + 1) ; // เพิ่มที่
+        }//end if
+
+        arr[count] = temp ; // วาง ที่ตำแหน่งสุดท้าย
+
+        int i = 0 ;
+        while (!arr[i].queue_id.equals( id )) {//loop หา queue_id ที่ต้องการหา
+            i++ ;
+        }//end while
+
+        if (i == count) {
+            return -1 ; // ไม่พบ
+        } else {
+            return i ; // พบที่ตำแหน่ง i
+        }//end if
+    }
+
+    int searchDuplicate (inputdata x) {
         for (int i = 0; i < count; i++) {
             if (arr[i].name.equals(x.name) && arr[i].number_table.equals(x.number_table) && arr[i].date.equals(x.date) && arr[i].time.equals(x.time)) {
 
