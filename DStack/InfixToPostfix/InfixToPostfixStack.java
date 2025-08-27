@@ -6,6 +6,6 @@ public class InfixToPostfixStack {
         String Exp = "A*(B+C)/D" ;
         
         st.pushAll(Exp) ;
-
+//mmmm
     }
 }
