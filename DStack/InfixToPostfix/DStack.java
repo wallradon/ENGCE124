@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class DStack {
     int count ;
     DNode top, temp ;
@@ -76,4 +73,3 @@ public class DStack {
     }
     
 }
-
