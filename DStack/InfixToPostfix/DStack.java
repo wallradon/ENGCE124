@@ -63,6 +63,17 @@ public class DStack {
             return 0 ;
         }//end if
     }//end function PrecOperatorStack
+
+    void pushAll(String opererand) {
+
+        for( int i = 0 ; i <  opererand.length() ; i++ ){
+
+            push( opererand.charAt(i)) ;
+            System.out.println("top = "+ top.info);
+
+        }//end for
+        System.out.println("Push Finis") ;
+    }
     
 }
 

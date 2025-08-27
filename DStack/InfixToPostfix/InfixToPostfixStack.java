@@ -3,15 +3,8 @@ public class InfixToPostfixStack {
         DStack st = new DStack() ;
         
         String Exp = "A*(B+C)/D" ;
-        for( int i = 0 ; i < Exp.length() ; i++ ){
+        
+        st.pushAll(Exp) ;
 
-            st.push(Exp.charAt(i)) ;
-
-        }//end for
-        for( int i = 0 ; i < Exp.length() ; i++ ){
-
-            System.out.println((char)st.pop().info) ;
-
-        }//end for
     }
 }
