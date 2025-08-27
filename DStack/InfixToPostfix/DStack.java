@@ -64,24 +64,46 @@ public class DStack {
     void pushAll(String opererand) {
 
         for( int i = 0 ; i <  opererand.length() ; i++ ){
-            // if ( top != null) {
-            //     System.out.println("top = "+ top.info);
-            // }
-            Operandcheck( opererand.charAt(i) ) ;
-            push( opererand.charAt(i)) ;
+
+            
+            char CheckOperand = Operandcheck( opererand.charAt(i) ) ;
+            int CheckOperetor = Operetorcheck( opererand.charAt(i) ) ;
+            if (CheckOperand != '\0') {
+                System.out.println("Output = "+ CheckOperand) ;
+            }else if (CheckOperand == '\0') {
+                System.out.println("Output = Opatetor " ) ;
+                if (CheckOperetor == 40) {
+                    System.out.println("Output = ( " ) ;
+                }
+            }
+
         }//end for
         System.out.println("Push Finis") ;
     }
-    boolean Operandcheck( int Infix ) { 
+    char Operandcheck( int Infix ) { 
 
-        if ( Infix >= 65 && Infix <= 90 || Infix >= 97 && Infix <= 122) {
-            System.out.println("1 Find Oparand") ;
-            return true ;
+        if ( Infix >= 65 && Infix <= 90 || Infix >= 97 && Infix <= 122 || Infix >= 48 && Infix <= 57) {
+            // System.out.println("1 Find Oparand") ;
+            return (char)Infix ;
         }else{
-            System.out.println("0 Find Oparetor");
-            return false ;
+            // System.out.println("0 Find Oparetor");
+            return '\0' ;
         }
+    }
 
+    int Operetorcheck( int Infix ) { 
+
+        if ( Infix >= 33 && Infix <= 47 || 
+            Infix >= 58 && Infix <= 63 || 
+            Infix >= 91 && Infix <= 96|| 
+            Infix >= 123 && Infix <= 126) 
+            {
+            // System.out.println("1 Find Oparand") ;
+            return Infix ;
+        }else{
+            // System.out.println("0 Find Oparetor");
+            return -1 ;
+        }
     }
     
 }
