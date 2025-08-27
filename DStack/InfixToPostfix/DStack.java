@@ -2,7 +2,7 @@ public class DStack {
     int count ;
     DNode top, temp ;
     
-    void push( int item) {
+    void push( int item ) {
         DNode newnode = new DNode() ;
         newnode.info = item ;
         if ( count == 0 ) {
@@ -64,12 +64,24 @@ public class DStack {
     void pushAll(String opererand) {
 
         for( int i = 0 ; i <  opererand.length() ; i++ ){
-
+            // if ( top != null) {
+            //     System.out.println("top = "+ top.info);
+            // }
+            Operandcheck( opererand.charAt(i) ) ;
             push( opererand.charAt(i)) ;
-            System.out.println("top = "+ top.info);
-
         }//end for
         System.out.println("Push Finis") ;
+    }
+    boolean Operandcheck( int Infix ) { 
+
+        if ( Infix >= 65 && Infix <= 90 || Infix >= 97 && Infix <= 122) {
+            System.out.println("1 Find Oparand") ;
+            return true ;
+        }else{
+            System.out.println("0 Find Oparetor");
+            return false ;
+        }
+
     }
     
 }
