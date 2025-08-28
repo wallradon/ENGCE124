@@ -82,7 +82,9 @@ public class DStack {
     }
     char Operandcheck( int Infix ) { 
 
-        if ( Infix >= 65 && Infix <= 90 || Infix >= 97 && Infix <= 122 || Infix >= 48 && Infix <= 57) {
+        if ( Infix >= 65 && Infix <= 90 || 
+        Infix >= 97 && Infix <= 122 || 
+        Infix >= 48 && Infix <= 57) {
             // System.out.println("1 Find Oparand") ;
             return (char)Infix ;
         }else{
