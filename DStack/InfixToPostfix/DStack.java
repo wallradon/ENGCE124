@@ -69,11 +69,17 @@ public class DStack {
             char CheckOperand = Operandcheck( opererand.charAt(i) ) ;
             int CheckOperetor = Operetorcheck( opererand.charAt(i) ) ;
             if (CheckOperand != '\0') {
+
                 System.out.println("Output = "+ CheckOperand) ;
+
             }else if (CheckOperand == '\0') {
+
                 System.out.println("Output = Opatetor " ) ;
+
                 if (CheckOperetor == 40) {
+
                     System.out.println("Output = ( " ) ;
+                    
                 }
             }
 
