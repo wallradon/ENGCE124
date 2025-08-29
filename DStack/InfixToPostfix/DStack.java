@@ -38,7 +38,7 @@ public class DStack {
     boolean isEmpty(){ return count == 0 ; }
     int size(){ return count ; } // วัดsize
     
-    static int PrecOperatorinput( char operators ){
+    static int Precedence_Operator_input( char operators ){
         if ( operators == '^' ) {
             return 4 ;
         }else if (operators == '*' || operators == '%' || operators == '/'  ) {
@@ -50,7 +50,7 @@ public class DStack {
         }//end if
     }//end function PrecOperatorinput
 
-    static int PrecOperatorStack( char operators ){
+    static int Precedence_Operator_Stack( char operators ){
         if (operators == '^' ) {
             return 3 ;
         }else if (operators == '*' || operators == '%' || operators == '/'  ) {
@@ -63,7 +63,7 @@ public class DStack {
     }//end function PrecOperatorStack
 
     void InTopost(String proposition) {
-        System.out.printf("%-8s | %-16s | %-8s%n", "Symbol", "Postfix String", "Stack");
+        System.out.printf("%-8s | %-16s | %-8s%n", "Symbol", "Stack", "Postfix String");
         System.out.println("-----------------------------------------------");
 
         for( int i = 0 ; i <  proposition.length() ; i++ ){
@@ -83,12 +83,32 @@ public class DStack {
 
                    push(patiant) ;
                     
+                }else if ( patiant == ')') {
+                    
+                    while ( !isEmpty()&&(char)top.info != '(') { /*ถ้าไม่ว่างและไม่เท่ากับ ( */
+                        DLL.append(pop().info) ; /*pop to DLL(postfix) */
+                    }
+                    if( !isEmpty() && (char)top.info == ')'){ /*ถ้าไม่ว่างและเท่ากับ ( */
+                        pop() ; /*ทิ้ง */
+                    }
+                }else{
+                    /* ถ้าเป็น +-/^*  */
+                    while (!isEmpty() && Precedence_Operator_input(patiant) <= Precedence_Operator_Stack((char)top.info)) {
+                        DLL.append(pop().info);
+                    }
+                    push(patiant) ;
+
                 }
             }
-            printAll(proposition.charAt(i), ) ;
+            printAll(String.valueOf(patiant),DLL.getString() ) ;
 
         }//end for
-        System.out.println("Push Finis") ;
+        System.out.println("Postfix =") ;
+        while ( !isEmpty() ) {
+            DLL.append(pop().info) ;
+            printAll("", DLL.getString());
+        }
+        
     }
     char Operandcheck( int Infix ) { /*check Operand */
 
@@ -126,9 +146,9 @@ public class DStack {
             p = p.Llink;
         }
     
-        // พิมพ์ 1 แถวของตาราง
+        
         System.out.printf("%-8s | %-16s | %-8s%n",
-                symbol, postfix, stackStr);
+                symbol, stackStr, postfix);
     }
     
     
