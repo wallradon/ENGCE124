@@ -1,6 +1,6 @@
 public class DNode {
-    DNode Llink, Rlink;
-    int info;
+    DNode Llink, Rlink ;
+    int info ;
     DNode(){
         this(0);
     }
