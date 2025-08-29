@@ -5,7 +5,7 @@ public class InfixToPostfixStack {
         
         String Exp = "A-t/^(A14" ;
         
-        st.pushAll(Exp) ;
+        st.InTopost(Exp) ;
 
     }
 }

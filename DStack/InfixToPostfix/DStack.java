@@ -1,4 +1,5 @@
 public class DStack {
+    DList DLL = new DList() ;
     int count ;
     DNode top, temp ;
     
@@ -61,37 +62,39 @@ public class DStack {
         }//end if
     }//end function PrecOperatorStack
 
-    void pushAll(String opererand) {
+    void InTopost(String proposition) {
+        System.out.printf("%-8s | %-16s | %-8s%n", "Symbol", "Postfix String", "Stack");
+        System.out.println("-----------------------------------------------");
 
-        for( int i = 0 ; i <  opererand.length() ; i++ ){
+        for( int i = 0 ; i <  proposition.length() ; i++ ){
 
-            
-            char CheckOperand = Operandcheck( opererand.charAt(i) ) ;
-            int CheckOperetor = Operetorcheck( opererand.charAt(i) ) ;
-            if (CheckOperand != '\0') {
+            char patiant = proposition.charAt(i) ;
+            char CheckOperand = Operandcheck( patiant ) ;
+            int CheckOperetor = Operetorcheck( patiant ) ;
 
-                System.out.println("Output = "+ CheckOperand) ;
+            if (CheckOperand != '\0') { //ไม่ใช่ Operetor
 
+                DLL.append(CheckOperand) ;
+                
             }else if (CheckOperand == '\0') {
 
-                System.out.println("Output = Opatetor " ) ;
+                
+                if (CheckOperetor == '(') {
 
-                if (CheckOperetor == 40) {
-
-                    System.out.println("Output = ( " ) ;
+                   push(patiant) ;
                     
                 }
             }
+            printAll(proposition.charAt(i), ) ;
 
         }//end for
         System.out.println("Push Finis") ;
     }
-    char Operandcheck( int Infix ) { 
+    char Operandcheck( int Infix ) { /*check Operand */
 
         if ( Infix >= 65 && Infix <= 90 || 
         Infix >= 97 && Infix <= 122 || 
         Infix >= 48 && Infix <= 57) {
-            // System.out.println("1 Find Oparand") ;
             return (char)Infix ;
         }else{
             // System.out.println("0 Find Oparetor");
@@ -113,5 +116,20 @@ public class DStack {
             return -1 ;
         }
     }
+
+    void printAll(String symbol, String postfix) {
+        
+        String stackStr = "";
+        DNode p = top;
+        while (p != null) {
+            stackStr = (char)p.info + stackStr; // ไล่จากล่างขึ้นบน
+            p = p.Llink;
+        }
+    
+        // พิมพ์ 1 แถวของตาราง
+        System.out.printf("%-8s | %-16s | %-8s%n",
+                symbol, postfix, stackStr);
+    }
+    
     
 }
