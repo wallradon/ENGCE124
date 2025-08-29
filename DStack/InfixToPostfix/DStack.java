@@ -79,16 +79,16 @@ public class DStack {
             }else if (CheckOperand == '\0') {
 
                 
-                if (CheckOperetor == '(') {
+                if (CheckOperetor == 40) { //ASCII 40 = (
 
                    push(patiant) ;
                     
-                }else if ( patiant == ')') {
+                }else if ( patiant == 41) { //ASCII 41 = )
                     
-                    while ( !isEmpty()&&(char)top.info != '(') { /*ถ้าไม่ว่างและไม่เท่ากับ ( */
+                    while ( !isEmpty()&&(char)top.info != 40) { /*ถ้าไม่ว่างและไม่เท่ากับ ( */
                         DLL.append(pop().info) ; /*pop to DLL(postfix) */
                     }
-                    if( !isEmpty() && (char)top.info == ')'){ /*ถ้าไม่ว่างและเท่ากับ ( */
+                    if( !isEmpty() && (char)top.info == 40){ /*ถ้าไม่ว่างและเท่ากับ ( */
                         pop() ; /*ทิ้ง */
                     }
                 }else{
@@ -103,11 +103,10 @@ public class DStack {
             printAll(String.valueOf(patiant),DLL.getString() ) ;
 
         }//end for
-        System.out.println("Postfix =") ;
         while ( !isEmpty() ) {
             DLL.append(pop().info) ;
-            printAll("", DLL.getString());
         }
+        printAll("", DLL.getString());
         
     }
     char Operandcheck( int Infix ) { /*check Operand */
