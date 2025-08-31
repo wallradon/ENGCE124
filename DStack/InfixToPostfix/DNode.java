@@ -7,4 +7,5 @@ public class DNode {
     DNode(int data){
         info = data;
     }
+    
 }

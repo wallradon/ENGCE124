@@ -18,7 +18,7 @@ public class DList {
         travel = head ;
         while ( travel != null ) {
             strPostfix = strPostfix + ( char )travel.info ;   // ต่อ string
-            travel = travel.Rlink ;
+            travel = travel.Rlink ; /* เท่ากับข้อมูลทางขวา */
         }
         return strPostfix ;
     }
@@ -32,4 +32,24 @@ public class DList {
         }
         System.out.println("");
     }
+
+    DNode getNode( int index ) {
+        if (index < 0 || index >= count) {
+            return null ;
+        }
+        DNode result = head ;
+        for( int i = 0 ; i < index ; i++ ){
+            result = result.Rlink ; /* เท่ากับข้อมูลทางซ้ายของโหนด */
+        }
+        return result ;
+    }
+    String getStringAt(int index) {
+        DNode node = getNode(index);
+        if (node != null) {
+            return String.valueOf((char)node.info);
+        } else {
+            return null;
+        }
+    }
+    
 }
