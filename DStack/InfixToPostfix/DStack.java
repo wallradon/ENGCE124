@@ -151,12 +151,13 @@ public class DStack {
                 symbol, stackStr, postfix);
     }
     
-    void PostTOIn(){
+    String PostTOIn(){
         System.out.print("Postfix = " ) ;
         DLL.ShowAll() ;
         PostfixToInfix pti = new PostfixToInfix() ;
         String post = DLL.getAllNode() ;
         // System.out.println("Post = " + post) ;
         pti.PostToIn(post) ;
+        return post ;
     }
 }
