@@ -7,7 +7,7 @@ public class InfixToPostfixStack {
         
         // String Exp = "A*(B+C)/D" ;
         // String Exp = "A+B+C" ;
-        String Exp = "A+B*C" ;
+        String Exp = "A+B*c" ;
         // String Exp = "a+b*(c^d-e)^(f+g*h)-i" ; 
         // String Exp = "A+B)*C" ;
         
