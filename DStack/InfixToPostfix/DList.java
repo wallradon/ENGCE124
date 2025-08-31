@@ -27,10 +27,21 @@ public class DList {
         travel = head ;
         while ( travel != null ) {
             
-            System.out.println((char)travel.info) ;
+            System.out.print((char)travel.info) ;
             travel = travel.Rlink ;     
         }
         System.out.println("");
+    }
+
+    String getAllNode() {
+        travel = head ;
+        String node = "";
+        for ( int i = 0 ; i < count ; i++ ) {
+            node = node + (char)travel.info ;
+            travel = travel.Rlink ;
+        }
+        
+        return node ;      
     }
 
     DNode getNode( int index ) {
@@ -51,5 +62,11 @@ public class DList {
             return null;
         }
     }
-    
+
+    void clear (){
+        tail = null ;
+        head = null ;
+        travel = null ;
+        count = 0 ;
+    }
 }

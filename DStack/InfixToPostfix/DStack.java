@@ -1,8 +1,9 @@
 public class DStack {
     DList DLL = new DList() ;
+    
     int count ;
     DNode top, temp ;
-    
+
     void push( int item ) {
         DNode newnode = new DNode() ;
         newnode.info = item ;
@@ -150,5 +151,11 @@ public class DStack {
                 symbol, stackStr, postfix);
     }
     
-    
+    void PostTOIn(){
+        // DLL.ShowAll() ;
+        PostfixToInfix pti = new PostfixToInfix() ;
+        String post = DLL.getAllNode() ;
+        System.out.println("Post = " + post) ;
+        pti.PostToIn(post) ;
+    }
 }
