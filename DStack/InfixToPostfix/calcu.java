@@ -14,9 +14,10 @@ public class calcu {
         if (exponent < 0) throw new RuntimeException("ERROR pow ^ - ");
         int result = 1;
         while (exponent > 0){
-            if ((exponent & 1) == 1) result *= base;
-            base *= base;
-            exponent >>= 1;
+            if ((exponent & 1) == 1) 
+                result *= base ;
+            base *= base ;
+            exponent >>= 1 ;
         }
         return result;
     }

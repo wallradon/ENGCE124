@@ -1,0 +1,160 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Page-1" id="nMMiiF1gmhdblsGDR8Q6">
+    <mxGraphModel dx="4200" dy="2516" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7XHBcW6D8l3bazKDCB61-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-2" target="7XHBcW6D8l3bazKDCB61-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-2" value="เริ่ม" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="450" y="300" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-3" target="7XHBcW6D8l3bazKDCB61-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-3" value="&#xa;“สร้างสแตกว่าง” &lt;code data-start=&quot;560&quot; data-end=&quot;567&quot;&gt;stack&lt;/code&gt; (ชนิด &lt;code data-start=&quot;574&quot; data-end=&quot;582&quot;&gt;DStack&lt;/code&gt;) เพื่อเก็บตัวเลขชั่วคราวตอนคำนวณ&#xa;&#xa;" style="whiteSpace=wrap;html=1;strokeWidth=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="425" y="400" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-5" target="7XHBcW6D8l3bazKDCB61-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-5" value="&#xa;ตั้งตัวนับ &lt;code data-start=&quot;631&quot; data-end=&quot;642&quot;&gt;index = 0&lt;/code&gt;&#xa;&#xa;" style="whiteSpace=wrap;html=1;strokeWidth=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="425" y="490" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-9" target="7XHBcW6D8l3bazKDCB61-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&#xa;วนลูป: ขณะที่ &lt;code data-start=&quot;661&quot; data-end=&quot;687&quot;&gt;index &amp;lt; postfix.length()&lt;/code&gt; ให้ทำซ้ำ:&#xa;&#xa;" link="&#xa;วนลูป: ขณะที่ &lt;code data-end=&quot;687&quot; data-start=&quot;661&quot;&gt;index &amp;lt; postfix.length()&lt;/code&gt; ให้ทำซ้ำ:&#xa;&#xa;" id="7XHBcW6D8l3bazKDCB61-9">
+          <mxCell style="rhombus;whiteSpace=wrap;html=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+            <mxGeometry x="355" y="590" width="360" height="180" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-11" target="7XHBcW6D8l3bazKDCB61-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-11" value="&#xa;อ่านอักขระปัจจุบัน: &lt;code data-start=&quot;723&quot; data-end=&quot;754&quot;&gt;token = postfix.charAt(index)&lt;/code&gt;&#xa;&#xa;" style="whiteSpace=wrap;html=1;strokeWidth=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="425" y="790" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-13" target="7XHBcW6D8l3bazKDCB61-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-13" target="7XHBcW6D8l3bazKDCB61-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-13" value="&#xa;ช่องว่าง?&#xa;&#xa;" style="rhombus;whiteSpace=wrap;html=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="400" y="879.9999999999999" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="830" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-15" value="&#xa; ข้าม (เพิ่ม &lt;code data-start=&quot;840&quot; data-end=&quot;849&quot;&gt;index++&lt;/code&gt;) &#xa;&#xa;" style="whiteSpace=wrap;html=1;strokeWidth=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="715" y="915" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-18" target="7XHBcW6D8l3bazKDCB61-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-18" target="7XHBcW6D8l3bazKDCB61-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-18" value="&#xa;เป็นตัวอักษร (ตัวแปร)?&#xa;&#xa;" style="rhombus;whiteSpace=wrap;html=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1140" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-20" target="7XHBcW6D8l3bazKDCB61-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-20" value="&#xa;ช้ &lt;code data-start=&quot;934&quot; data-end=&quot;951&quot;&gt;isLetter(token)&lt;/code&gt; ตรวจ&#xa;&#xa;" style="whiteSpace=wrap;html=1;strokeWidth=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="425" y="1050" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-23" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="655" y="915" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-24" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="645" y="1160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-25" target="7XHBcW6D8l3bazKDCB61-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-25" value="&#xa;แปลงเป็นพิมพ์เล็ก: &lt;code data-start=&quot;996&quot; data-end=&quot;1034&quot;&gt;token = Character.toLowerCase(token)&lt;/code&gt;&lt;br data-start=&quot;1034&quot; data-end=&quot;1037&quot;&gt;&#xa;(เพื่อให้เทียบกับ &lt;code data-start=&quot;1062&quot; data-end=&quot;1077&quot;&gt;variableNames&lt;/code&gt; ได้คงที่ หาก &lt;code data-start=&quot;1091&quot; data-end=&quot;1106&quot;&gt;variableNames&lt;/code&gt; เป็นตัวพิมพ์เล็ก)&#xa;&#xa;" style="whiteSpace=wrap;html=1;strokeWidth=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="705" y="1150" width="330" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="830" y="780" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1100" y="1395" />
+              <mxPoint x="1100" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-27" value="&lt;span style=&quot;background-color: initial;&quot;&gt;แปลงเป็นพิมพ์เล็ก: &lt;/span&gt;&lt;code data-start=&quot;996&quot; data-end=&quot;1034&quot; style=&quot;background-color: initial;&quot;&gt;token = Character.toLowerCase(token)&lt;/code&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;(เพื่อให้เทียบกับ &lt;/span&gt;&lt;code data-start=&quot;1062&quot; data-end=&quot;1077&quot; style=&quot;background-color: initial;&quot;&gt;variableNames&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; ได้คงที่ หาก &lt;/span&gt;&lt;code data-start=&quot;1091&quot; data-end=&quot;1106&quot; style=&quot;background-color: initial;&quot;&gt;variableNames&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; เป็นตัวพิมพ์เล็ก)&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;เรียก &lt;/span&gt;&lt;code data-start=&quot;1138&quot; data-end=&quot;1194&quot; style=&quot;background-color: initial;&quot;&gt;getVariableValue(token, variableNames, variableValues)&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; เพื่อ “ดึงค่าของตัวแปร”&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ถ้าเจอ: ได้ค่า &lt;/span&gt;&lt;code data-start=&quot;1243&quot; data-end=&quot;1248&quot; style=&quot;background-color: initial;&quot;&gt;val&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; → &lt;/span&gt;&lt;code data-start=&quot;1251&quot; data-end=&quot;1268&quot; style=&quot;background-color: initial;&quot;&gt;stack.push(val)&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ถ้าไม่เจอ: โยน &lt;/span&gt;&lt;code data-start=&quot;1293&quot; data-end=&quot;1311&quot; style=&quot;background-color: initial;&quot;&gt;RuntimeException&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; แล้วจบ&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;เพิ่ม &lt;/span&gt;&lt;code data-start=&quot;1332&quot; data-end=&quot;1341&quot; style=&quot;background-color: initial;&quot;&gt;index++&lt;/code&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=1;align=left;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="700" y="1320" width="340" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-30" target="7XHBcW6D8l3bazKDCB61-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-30" value="&#xa;isDigit(token)&#xa;&#xa;" style="whiteSpace=wrap;html=1;strokeWidth=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="425" y="1320" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-32" target="7XHBcW6D8l3bazKDCB61-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-32" target="7XHBcW6D8l3bazKDCB61-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-32" target="7XHBcW6D8l3bazKDCB61-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-32" value="number ?" style="rhombus;whiteSpace=wrap;html=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1510" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1100" y="1280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1160" y="1575" />
+              <mxPoint x="1160" y="1280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-34" value="&lt;li data-start=&quot;1444&quot; data-end=&quot;1556&quot;&gt;&lt;p data-start=&quot;1446&quot; data-end=&quot;1556&quot;&gt;อ่าน “เลขหลายหลัก”:&lt;/p&gt;&lt;p data-start=&quot;1446&quot; data-end=&quot;1556&quot;&gt;ตั้ง endIndex = index แล้วไล่ไปจนกว่า postfix.charAt(endIndex) จะไม่ใช่ตัวเลข&lt;/p&gt;&lt;p data-start=&quot;1446&quot; data-end=&quot;1556&quot;&gt;แปลง substring [index, endIndex) เป็น int → number&lt;/p&gt;&lt;p data-start=&quot;1446&quot; data-end=&quot;1556&quot;&gt;stack.push(number)&lt;/p&gt;&lt;p data-start=&quot;1446&quot; data-end=&quot;1556&quot;&gt;เซ็ต index = endIndex&lt;/p&gt;&lt;/li&gt;" style="whiteSpace=wrap;html=1;strokeWidth=1;align=left;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="705" y="1500" width="390" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1160" y="1580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-39" value="&lt;strong data-start=&quot;862&quot; data-end=&quot;877&quot;&gt;pop 2 ครั้ง&lt;/strong&gt; จากสแตก: ได้ &lt;strong data-start=&quot;891&quot; data-end=&quot;898&quot;&gt;ขวา&lt;/strong&gt; ก่อน แล้ว &lt;strong data-start=&quot;909&quot; data-end=&quot;917&quot;&gt;ซ้าย&lt;/strong&gt;&lt;div&gt;&lt;span data-start=&quot;909&quot; data-end=&quot;917&quot;&gt;&lt;span&gt;&lt;div&gt;ตัดสินใจตามโอเปอเรเตอร์&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;+ → ซ้าย + ขวา&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- → ซ้าย - ขวา&lt;/div&gt;&lt;div&gt;* → ซ้าย × ขวา&lt;/div&gt;&lt;div&gt;/ → ถ้า ขวา = 0 ⇒ Error; ไม่งั้น ซ้าย ÷ ขวา (จำนวนเต็ม)&lt;/div&gt;&lt;div&gt;^ → เรียก powInt(ซ้าย, ขวา)&lt;/div&gt;&lt;div&gt;push ผลลัพธ์ ลงสแตก → i++&lt;/div&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=1;align=left;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="367.5" y="1680" width="335" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=0;fontSize=13;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-42" target="7XHBcW6D8l3bazKDCB61-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-42" value="&#xa; &lt;strong data-start=&quot;1226&quot; data-end=&quot;1241&quot;&gt;pop 1 ครั้ง&lt;/strong&gt;&#xa;&#xa;" style="whiteSpace=wrap;html=1;strokeWidth=1;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1545" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-45" value="Y" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="645" y="1530" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-47" value="N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1450" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-48" value="N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="530" y="1640" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-50" value="จบ" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fontStyle=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="135" y="1660" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-53" value="calculator" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="485" y="245" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

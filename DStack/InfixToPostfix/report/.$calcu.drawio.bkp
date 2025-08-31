@@ -1,0 +1,19 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Page-1" id="nMMiiF1gmhdblsGDR8Q6">
+    <mxGraphModel dx="420" dy="252" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7XHBcW6D8l3bazKDCB61-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="7XHBcW6D8l3bazKDCB61-2" target="7XHBcW6D8l3bazKDCB61-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-2" value="เริ่ม" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="450" y="300" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7XHBcW6D8l3bazKDCB61-3" value="&#xa;“สร้างสแตกว่าง” &lt;code data-end=&quot;567&quot; data-start=&quot;560&quot;&gt;stack&lt;/code&gt; (ชนิด &lt;code data-end=&quot;582&quot; data-start=&quot;574&quot;&gt;DStack&lt;/code&gt;) เพื่อเก็บตัวเลขชั่วคราวตอนคำนวณ&#xa;&#xa;" style="whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="400" width="220" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
