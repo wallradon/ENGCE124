@@ -152,10 +152,11 @@ public class DStack {
     }
     
     void PostTOIn(){
-        // DLL.ShowAll() ;
+        System.out.print("Postfix = " ) ;
+        DLL.ShowAll() ;
         PostfixToInfix pti = new PostfixToInfix() ;
         String post = DLL.getAllNode() ;
-        System.out.println("Post = " + post) ;
+        // System.out.println("Post = " + post) ;
         pti.PostToIn(post) ;
     }
 }
