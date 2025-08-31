@@ -5,12 +5,11 @@ public class InfixToPostfixStack {
         calcu cl = new calcu() ;
         
         
-        // String Exp = "A*(B+C)/D" ;
+        String Exp = "A*(B+C)/D" ;
         // String Exp = "A+B+C" ;
         // String Exp = "A+B*c" ;
-        // String Exp = "a+b*(c^d-e)^(f+g*h)-i" ; 
         // String Exp = "A+B)*C" ;
-        String Exp = "A^b+c*d" ;
+        // String Exp = "A^b+c*d" ;
         
         st.InTopost(Exp) ;
         System.out.println("Exp = " + Exp ) ;
