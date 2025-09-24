@@ -22,6 +22,11 @@ public class Class_main {
             } else if( mode.equals("ex") ) {
                 end_pg = false ;
                 data.close() ;
+            }else if( mode.equals("search")){
+                String Sdata ; 
+                System.out.println("what do you want to search data : ") ;
+                Sdata = data.nextLine() ;
+                D.search(Sdata) ;
             }//end if
         }//end while
     }//end main
