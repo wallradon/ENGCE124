@@ -54,7 +54,16 @@ public class DLL {
 
 
 
-//     behind_ins(){}
+    void behind_ins(){
+        /* 
+         * DNode newnode = new DNode() ; 
+         * newnode.Rlink = p.Rlink ;
+         * newnode.Llink = p ;
+         * p.Rlink.Llink = newnode ;
+         * p.Rlink = newnode
+         * 
+         */
+    }
 //     remove(){}
 
 
