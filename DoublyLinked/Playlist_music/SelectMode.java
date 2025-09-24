@@ -22,10 +22,18 @@ public class SelectMode {
                 end_pg = false ;
                 data.close() ;
             }else if( mode.equals("search")){
-                String Sdata ; 
-                System.out.println("what do you want to search data : ") ;
-                Sdata = data.nextLine() ;
+                int Sdata ; 
+                System.out.println("What data would you like to search : ") ;
+                Sdata = data.nextInt() ;
                 D.search(Sdata) ;
+            }else if( mode.equals("insf")){
+                String music ;
+                int pos ;
+                System.out.print("What music would you like to add : ") ;
+                music = data.nextLine() ;
+                System.out.print("What position would you like to add : ") ;
+                pos = data.nextInt() ;
+                D.front_ins( music, pos ) ;
             }//end if
         }//end while
     }
