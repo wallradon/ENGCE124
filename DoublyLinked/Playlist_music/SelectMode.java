@@ -7,26 +7,24 @@ public class SelectMode {
 
         boolean end_pg = true ;
         String mode, song ;
-
-        System.out.println("add, insFront, insBehind, del, show, ex") ;
+        System.out.println();
+        System.out.println(
+            "1 : Add Music to Playlist\n" +
+            "2 : Insert Music Before Selected Song\n" +
+            "3 : Insert Music After Selected Song\n" +
+            "4 : Remove Music\n" +
+            "5 : Show Playlist\n" +
+            "6 : Exit Program"
+        );
+        System.out.println();
         while(end_pg){
-            System.out.println("Select Mode: ") ;
+            System.out.print("Select Mode: ") ;
             mode = data.nextLine() ;
             if( mode.equals("add") ) {
                 System.out.print("What song will u add : ") ;
                 song = data.nextLine() ;
                 D.add(song) ;
-            } else if( mode.equals("show") ){
-                D.show() ;
-            } else if( mode.equals("ex") ) {
-                end_pg = false ;
-                data.close() ;
-            }else if( mode.equals("search")){
-                int Sdata ; 
-                System.out.println("What data would you like to search : ") ;
-                Sdata = data.nextInt() ;
-                D.search(Sdata) ;
-            }else if( mode.equals("insf")){
+            } else if( mode.equals("insf")){
                 String music ;
                 int pos ;
                 System.out.print("What music would you like to add : ") ;
@@ -34,7 +32,12 @@ public class SelectMode {
                 System.out.print("What position would you like to add : ") ;
                 pos = data.nextInt() ;
                 D.front_ins( music, pos ) ;
-            }//end if
+            } else if( mode.equals("ex") ) {
+                end_pg = false ;
+                data.close() ;
+            } else if( mode.equals("show") ){
+                D.show() ;
+            } //end if
         }//end while
     }
 }

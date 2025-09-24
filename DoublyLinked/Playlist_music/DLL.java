@@ -30,6 +30,8 @@ public class DLL {
                 head.Llink = newnode ;
                 head = head.Llink ;
                 count++ ;
+                System.out.println("insert sucuccd") ;
+                show() ;
                 return ;
             }//end if
             for( int i = 0 ; i <= pos ; i++ ){
@@ -39,16 +41,20 @@ public class DLL {
                     p.Llink.Rlink = newnode ;
                     p.Llink = newnode ;
                     count++ ;
+                    System.out.println("insert sucuccd") ;
+                    show() ;
                 }else{
                     p = p.Rlink ;
                 }//end if
             }//end for
+        }else{
+            System.out.println("insert Failed") ;
         }//end if
     }//end mathod
 
 
 
-//     back_ins(){}
+//     behind_ins(){}
 //     remove(){}
 
 
