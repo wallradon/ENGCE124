@@ -1,5 +1,5 @@
 public class DLL {
-    DNode head,tail, car ;
+    DNode head,tail, chack ;
     int count = 0 ;
 
     void add( String item ){
@@ -18,17 +18,16 @@ public class DLL {
     }//end add
 
 
-    // void front_ins( int item, DNode pos ){
-    // }
+    // void front_ins( int item, DNode pos ){}
 //     back_ins(){}
 //     remove(){}
     void show(){
-        car = head ; 
+        chack = head ; 
         int number = 0 ;
-        while( car != null ){
+        while( chack != null ){
             number++ ;
-            System.out.println( number + "." + car.info ) ;
-            car = car.Rlink ;
+            System.out.println( number + "." + chack.info ) ;
+            chack = chack.Rlink ;
         }
 
 
