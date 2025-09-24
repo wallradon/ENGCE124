@@ -17,12 +17,13 @@ public class Class_main {
                 System.out.print("What song will u add : ") ;
                 song = data.nextLine() ;
                 D.add(song) ;
-            }else if( mode.equals("ex") ) {
+            } else if( mode.equals("show") ){
+                D.show() ;
+            } else if( mode.equals("ex") ) {
                 end_pg = false ;
                 data.close() ;
-            }
-        }
-        D.show() ;
-    }
-}
+            }//end if
+        }//end while
+    }//end main
+}//end class
  
