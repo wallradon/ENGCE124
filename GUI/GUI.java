@@ -3,6 +3,7 @@ import javax.swing.* ;
 public class GUI {
     
     public static void main(String[] args) {
+        /* JFrame */
         JFrame f = new JFrame() ;
         f.setTitle("Music playlist") ;
         f.setSize(600, 400) ;
