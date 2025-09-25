@@ -54,7 +54,7 @@ public class DLL {
 
 
 
-    void behind_ins(){
+    void behind_ins( String item, int ref ){
         /* 
          * DNode newnode = new DNode() ; 
          * newnode.Rlink = p.Rlink ;
@@ -63,6 +63,32 @@ public class DLL {
          * p.Rlink = newnode
          * 
          */
+        int pos = search( ref ) ;
+        DNode newnode = new DNode() ;
+        DNode p ;
+        p = head ;
+        newnode.info = item ;
+        if( pos != -1) {
+            if( pos == 0 ){
+                //if pos == head
+                System.out.println("insert HEAD ERROR") ;
+            }//end if
+            for( int i = 0 ; i <= pos ; i++ ){
+                if( i == pos && pos != 0 ) { 
+                    newnode.Rlink = p.Rlink ;
+                    newnode.Llink = p ;
+                    p.Rlink.Llink = newnode ;
+                    p.Rlink = newnode ;
+                    count++ ;
+                    System.out.println("insert sucuccd") ;
+                    show() ;
+                }else{
+                    p = p.Rlink ;
+                }//end if
+            }//end for
+        }else{
+            System.out.println("insert Failed") ;
+        }//end if
     }
 //     remove(){}
 

@@ -20,23 +20,34 @@ public class SelectMode {
         while(end_pg){
             System.out.print("Select Mode: ") ;
             mode = data.nextLine() ;
-            if( mode.equals("add") ) {
-                System.out.print("What song will u add : ") ;
+            if( mode.equals("1") ) {
+                System.out.print("What song will u add ? : ") ;
                 song = data.nextLine() ;
                 D.add(song) ;
-            } else if( mode.equals("insf")){
+            } else if( mode.equals("2")){
                 String music ;
                 int pos ;
-                System.out.print("What music would you like to add : ") ;
+                System.out.print("What music would you like to add ? : ") ;
                 music = data.nextLine() ;
-                System.out.print("What position would you like to add : ") ;
+                System.out.print("Insert song where ? : ") ;
                 pos = data.nextInt() ;
                 D.front_ins( music, pos ) ;
-            } else if( mode.equals("ex") ) {
+            }else if( mode.equals("3")){
+                String music ;
+                int pos ;
+                System.out.print("What music would you like to add ? : ") ;
+                music = data.nextLine() ;
+                System.out.println("___________________________________") ;
+                D.show() ;
+                System.out.println("___________________________________") ;
+                System.out.print("Insert song where ? : ") ;
+                pos = data.nextInt() ;
+                D.behind_ins( music, pos ) ;
+            } else if( mode.equals("5") ){
+                D.show() ;
+            } else if( mode.equals("6") ) {
                 end_pg = false ;
                 data.close() ;
-            } else if( mode.equals("show") ){
-                D.show() ;
             } //end if
         }//end while
     }
