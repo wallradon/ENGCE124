@@ -44,6 +44,7 @@ public class SelectMode {
                 D.behind_ins( music, pos ) ;
             } else if( mode.equals("4") ){
                 int pos ;
+                D.show() ;
                 System.out.print("What music would you like to remove ? : ") ;
                 pos = data.nextInt() ;
                 D.remove(pos) ;

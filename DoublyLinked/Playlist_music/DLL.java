@@ -90,9 +90,16 @@ public class DLL {
             System.out.println("insert Failed") ;
         }//end if
     }
+    
+    
     void remove( int pos ){
         DNode ref = SearchData(pos) ;
-        System.out.println(ref.info);
+        System.out.println( "Data = " + ref.info) ;
+        ref.Llink.Rlink = ref.Rlink ;
+        ref.Rlink.Llink = ref.Llink ;
+        ref.Rlink = null ;
+        ref.Llink = null ;
+        show();
     }
 
 
@@ -128,19 +135,9 @@ public class DLL {
         DNode node ;
         node = head ;
         int pos = ref-1 ;
-        if( node != null ) {
-            for( int i = 0 ; i > count ; i++){
-                if( i == pos ){
-                    if ( node.info != null ) {
-                        return node ;
-                    }
-                }else{  
-                    node = node.Rlink ;
-                }//end if
-            }//end for
-        }//end if
-        System.out.println("don't have data");
-        return null ;
+        if(ref > count || ref < 1){ return null ; }  //end if
+        for( int i = 0 ; i < pos ; i++ ) { node = node.Rlink ; }//end for
+        return node ;
     } //end mathod
 
 }//end class
