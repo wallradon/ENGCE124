@@ -48,6 +48,7 @@ public class SelectMode {
                 System.out.print( "What music would you like to remove ? : ") ;
                 pos = data.nextInt( ) ;
                 D.remove(pos) ;
+                D.show( ) ;
             } else if( mode.equals("5") ){
                 D.show() ;
             } else if( mode.equals("6") ) {
