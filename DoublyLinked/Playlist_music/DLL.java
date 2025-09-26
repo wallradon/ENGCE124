@@ -61,6 +61,18 @@ public class DLL {
         DNode pos = SearchData( ref ) ;
         DNode newnode = new DNode() ;
         newnode.info = item ;
+        if( pos != null ){
+            if(ref == 1){
+                /* behind head */
+            }else if( ref == count) {
+                /* behind tail */
+            }else{
+                newnode.Rlink = pos.Rlink ;
+                newnode.Llink = pos ;
+                pos.Rlink.Llink = newnode ;
+                pos.Rlink = newnode ;
+            }
+        }
         
     }
     
