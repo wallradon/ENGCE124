@@ -18,13 +18,13 @@ public class SelectMode {
                 "6 : Exit Program"
             );
             System.out.println();
-            System.out.println("Select Mode: ") ;
+            System.out.println("Select Mode: " ) ;
             mode = data.nextLine() ;
-            if( mode.equals("1") ) {
+            if( mode.equals( "1" ) ) {
                 System.out.print("What song will u add ? : ") ;
                 song = data.nextLine() ;
                 D.add(song) ;
-            } else if( mode.equals("2")){
+            } else if( mode.equals( "2" ) ){
                 String music ;
                 int pos ;
                 System.out.print("What music would you like to add ? : ") ;
@@ -33,7 +33,7 @@ public class SelectMode {
                 System.out.print("Insert song where ? : ") ;
                 pos = data.nextInt() ;
                 D.front_ins( music, pos ) ;
-            } else if( mode.equals("3")){
+            } else if( mode.equals( "3" ) ){
                 String music ;
                 int pos ;
                 System.out.print("What music would you like to add ? : ") ;
@@ -42,11 +42,11 @@ public class SelectMode {
                 System.out.print("Insert song where ? : ") ;
                 pos = data.nextInt() ;
                 D.behind_ins( music, pos ) ;
-            } else if( mode.equals("4") ){
+            } else if( mode.equals( "4" ) ){
                 int pos ;
-                D.show() ;
-                System.out.print("What music would you like to remove ? : ") ;
-                pos = data.nextInt() ;
+                D.show( ) ;
+                System.out.print( "What music would you like to remove ? : ") ;
+                pos = data.nextInt( ) ;
                 D.remove(pos) ;
             } else if( mode.equals("5") ){
                 D.show() ;
