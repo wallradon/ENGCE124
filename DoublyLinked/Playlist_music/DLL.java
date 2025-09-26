@@ -58,37 +58,10 @@ public class DLL {
 
 
     void behind_ins( String item, int ref ){
-        int pos = search( ref ) ;
+        DNode pos = SearchData( ref ) ;
         DNode newnode = new DNode() ;
-        DNode p ;
-        p = head ;
         newnode.info = item ;
-        if( pos != -1) {
-            if( count == 1 ){ //แทรกหลัง หัว-ท้าย
-                p.Rlink = newnode ;
-                newnode.Llink = p ;
-                tail = newnode ;
-                count++ ;
-                System.out.println("\ninsert behind head sucuccd") ;
-                show() ;
-                return ;
-            }//end if
-            for( int i = 0 ; i <= pos ; i++ ){ // ไม่ใช้แทรกหลังหัว - ท้าย
-                if( i == pos ) { 
-                    newnode.Rlink = p.Rlink ;
-                    newnode.Llink = p ;
-                    p.Rlink.Llink = newnode ;
-                    p.Rlink = newnode ;
-                    count++ ;
-                    System.out.println("\ninsert sucuccd") ;
-                    show() ;
-                }else{
-                    p = p.Rlink ;
-                }//end if
-            }//end for
-        }else{
-            System.out.println("insert Failed") ;
-        }//end if
+        
     }
     
     
@@ -105,6 +78,10 @@ public class DLL {
                 tail = null ;
                 count-- ;
             }
+        }else if( pos == count ){
+            tail = ref.Llink ;
+            tail.Rlink = null ;
+            count-- ;
         }else{
             //ลบท้าย
             System.out.println( "Data = " + ref.info) ;
