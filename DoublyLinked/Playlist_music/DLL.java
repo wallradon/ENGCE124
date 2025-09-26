@@ -93,19 +93,38 @@ public class DLL {
     
     
     void remove( int pos ){
+        //ลบหัว
         DNode ref = SearchData(pos) ;
-        System.out.println( "Data = " + ref.info) ;
-        ref.Llink.Rlink = ref.Rlink ;
-        ref.Rlink.Llink = ref.Llink ;
-        ref.Rlink = null ;
-        ref.Llink = null ;
-        show();
+        if( pos == 1 ){
+            if ( count > 1) {
+                head = ref.Rlink ;
+                head.Llink = null ;
+                count-- ;
+            }else if ( count == 1) {
+                head = null ;
+                tail = null ;
+                count-- ;
+            }
+        }else{
+            //ลบท้าย
+            System.out.println( "Data = " + ref.info) ;
+            ref.Llink.Rlink = ref.Rlink ;
+            ref.Rlink.Llink = ref.Llink ;
+            ref.Rlink = null ;
+            ref.Llink = null ;
+            count-- ;
+        }//end if
     }
 
 
     void show(){
         chack = head ; 
         int number = 0 ;
+
+        if (chack == null) { 
+            System.out.println("Node don't have data") ; 
+            return ;
+        }
         System.out.println("___________________________________") ;
         while( chack != null ){
             number++ ;

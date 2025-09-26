@@ -8,16 +8,16 @@ public class SelectMode {
         boolean end_pg = true ;
         String mode, song ;
         System.out.println();
-        System.out.println(
-            "1 : Add Music to Playlist\n" +
-            "2 : Insert Music Before Selected Song\n" +
-            "3 : Insert Music After Selected Song\n" +
-            "4 : Remove Music\n" +
-            "5 : Show Playlist\n" +
-            "6 : Exit Program"
-        );
-        System.out.println();
         while(end_pg){
+            System.out.println(
+                "1 : Add Music to Playlist\n" +
+                "2 : Insert Music Before Selected Song\n" +
+                "3 : Insert Music After Selected Song\n" +
+                "4 : Remove Music\n" +
+                "5 : Show Playlist\n" +
+                "6 : Exit Program"
+            );
+            System.out.println();
             System.out.println("Select Mode: ") ;
             mode = data.nextLine() ;
             if( mode.equals("1") ) {
