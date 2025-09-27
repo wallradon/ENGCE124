@@ -70,32 +70,33 @@ public class DLL {
 
     }// end mathod
 
-    // void remove( int pos ) {
-    //     // ลบหัว
-    //     DNode ref = SearchData( pos ) ;
-    //     if ( pos == 1 ) {
-    //         if ( count > 1 ) {
-    //             head = ref.Rlink ;
-    //             head.Llink = null ;
-    //             count-- ;
-    //         } else if ( count == 1 ) {
-    //             head = null ;
-    //             tail = null ;
-    //             count-- ;
-    //         }// end if
-    //     } else if ( pos == count ) {
-    //         // ลบท้าย
-    //         tail = ref.Llink ;
-    //         tail.Rlink = null ;
-    //         count--;
-    //     } else {
-    //         ref.Llink.Rlink = ref.Rlink ;
-    //         ref.Rlink.Llink = ref.Llink ;
-    //         ref.Rlink = null ;
-    //         ref.Llink = null ;
-    //         count-- ;
-    //     } // end if
-    // }//end mathod
+    void remove( String pos ) {
+        // ลบหัว
+        DNode ref = SearchData( pos ) ;
+        if ( pos.equals(head.info.name) ) {
+            //ลบหัว
+            if ( count > 1 ) {
+                head = ref.Rlink ;
+                head.Llink = null ;
+                count-- ;
+            } else if ( count == 1 ) {
+                head = null ;
+                tail = null ;
+                count-- ;
+            }// end if
+        } else if ( pos.equals(tail.info.name) ) {
+            // ลบท้าย
+            tail = ref.Llink ;
+            tail.Rlink = null ;
+            count--;
+        } else {
+            ref.Llink.Rlink = ref.Rlink ;
+            ref.Rlink.Llink = ref.Llink ;
+            ref.Rlink = null ;
+            ref.Llink = null ;
+            count-- ;
+        } // end if
+    }//end mathod
 
     void show( ) {
         chack = head ;

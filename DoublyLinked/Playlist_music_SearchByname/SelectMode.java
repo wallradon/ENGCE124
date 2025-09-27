@@ -11,7 +11,7 @@ public class SelectMode {
         String length = "" ;
 
         boolean end_pg = true ;
-        String mode, song ;
+        String mode ;
         System.out.println();
         while(end_pg){
             System.out.println(
@@ -67,11 +67,11 @@ public class SelectMode {
                 pos = data.nextLine() ;
                 D.behind_ins( info, pos ) ;
             } else if( mode.equals( "4" ) ){
-                int pos ;
+                String pos ;
                 D.show( ) ;
                 System.out.print( "What music would you like to remove ? : ") ;
-                pos = data.nextInt( ) ;
-                // D.remove(pos) ;
+                pos = data.nextLine( ) ;
+                D.remove(pos) ;
                 D.show( ) ;
             } else if( mode.equals("5") ){
                 D.show() ;
