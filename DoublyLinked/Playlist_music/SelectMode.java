@@ -37,23 +37,35 @@ public class SelectMode {
                 information info = new information(name, artist, album, length ) ;
                 D.add(info) ;
             } else if( mode.equals( "2" ) ){
-                String music ;
+                System.out.print("What name song will u Insert ? : ") ;
+                name = data.nextLine() ;
+                System.out.print("What artist name will u Insert ? : ") ;
+                artist = data.nextLine() ;
+                System.out.print("What album name will u Insert ? : ") ;
+                album = data.nextLine() ;
+                System.out.print("How long is this song? : ") ;
+                length = data.nextLine() ;
+                information info = new information(name, artist, album, length ) ;
                 int pos ;
-                System.out.print("What music would you like to add ? : ") ;
-                music = data.nextLine() ;
                 D.show() ;
                 System.out.print("Insert song where ? : ") ;
                 pos = data.nextInt() ;
-                // D.front_ins( music, pos ) ;
+                D.front_ins( info, pos ) ;
             } else if( mode.equals( "3" ) ){
-                String music ;
+                System.out.print("What name song will u Insert ? : ") ;
+                name = data.nextLine() ;
+                System.out.print("What artist name will u Insert ? : ") ;
+                artist = data.nextLine() ;
+                System.out.print("What album name will u Insert ? : ") ;
+                album = data.nextLine() ;
+                System.out.print("How long is this song? : ") ;
+                length = data.nextLine() ;
+                information info = new information(name, artist, album, length ) ;
                 int pos ;
-                System.out.print("What music would you like to add ? : ") ;
-                music = data.nextLine() ;
                 D.show() ;
                 System.out.print("Insert song where ? : ") ;
                 pos = data.nextInt() ;
-                // D.behind_ins( music, pos ) ;
+                D.behind_ins( info, pos ) ;
             } else if( mode.equals( "4" ) ){
                 int pos ;
                 D.show( ) ;

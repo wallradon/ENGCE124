@@ -103,15 +103,13 @@ public class DLL {
             System.out.println( "Node don't have data" ) ;
             return;
         }// end if
-        System.out.println( "___________________________________" ) ;
+        System.out.println( ) ;
         while (chack != null) {
             number++;
-            System.out.println( "Music name : " + chack.info.name ) ;
-            System.out.println( "Artist name : " + chack.info.artist ) ;
-            System.out.println( "Album name : " + chack.info.album ) ;
-            System.out.println( "length of Music : " + chack.info.length ) ;
+            System.out.println( number + ". Music name : " + chack.info.name ) ;
             chack = chack.Rlink;
         }//end loop
+        System.out.println( ) ;
     }//end mathod
 
     DNode SearchData( int ref ) {
