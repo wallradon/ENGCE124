@@ -1,6 +1,6 @@
 public class DNode {
 
-    String info ;
+    information info ;
     DNode Llink,Rlink ;
     
 }

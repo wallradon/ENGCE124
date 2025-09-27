@@ -2,7 +2,7 @@ public class DLL {
     DNode head, tail, chack;
     int count = 0;
 
-    void add( String item)  {
+    void add( information item)  {
         DNode newnode = new DNode( );
         newnode.info = item ; 
         if (count == 0) { 
@@ -20,7 +20,7 @@ public class DLL {
 
     }// end add
 
-    void front_ins( String item, int ref ) {
+    void front_ins( information item, int ref ) {
         DNode pos = SearchData( ref ) ;
         DNode newnode = new DNode( ) ;
         newnode.info = item ;
@@ -46,7 +46,7 @@ public class DLL {
         } // end if
     }// end mathod
 
-    void behind_ins( String item, int ref ) {
+    void behind_ins( information item, int ref ) {
         DNode pos = SearchData( ref ) ;
         DNode newnode = new DNode( ) ;
         newnode.info = item ;
@@ -106,10 +106,12 @@ public class DLL {
         System.out.println( "___________________________________" ) ;
         while (chack != null) {
             number++;
-            System.out.println( number + "." + chack.info ) ;
+            System.out.println( "Music name : " + chack.info.name ) ;
+            System.out.println( "Artist name : " + chack.info.artist ) ;
+            System.out.println( "Album name : " + chack.info.album ) ;
+            System.out.println( "length of Music : " + chack.info.length ) ;
             chack = chack.Rlink;
         }//end loop
-        System.out.println( "___________________________________" ) ;
     }//end mathod
 
     DNode SearchData( int ref ) {

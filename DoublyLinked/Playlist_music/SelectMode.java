@@ -5,6 +5,11 @@ public class SelectMode {
         DLL D = new DLL() ;
         Scanner data = new Scanner(System.in) ;
 
+        String name = "" ;
+        String artist = "" ;
+        String album = "" ;
+        String length = "" ;
+
         boolean end_pg = true ;
         String mode, song ;
         System.out.println();
@@ -21,9 +26,16 @@ public class SelectMode {
             System.out.println("Select Mode: " ) ;
             mode = data.nextLine() ;
             if( mode.equals( "1" ) ) {
-                System.out.print("What song will u add ? : ") ;
-                song = data.nextLine() ;
-                D.add(song) ;
+                System.out.print("What name song will u add ? : ") ;
+                name = data.nextLine() ;
+                System.out.print("What artist name will u add ? : ") ;
+                artist = data.nextLine() ;
+                System.out.print("What album name will u add ? : ") ;
+                album = data.nextLine() ;
+                System.out.print("How long is this song? : ") ;
+                length = data.nextLine() ;
+                information info = new information(name, artist, album, length ) ;
+                D.add(info) ;
             } else if( mode.equals( "2" ) ){
                 String music ;
                 int pos ;
@@ -32,7 +44,7 @@ public class SelectMode {
                 D.show() ;
                 System.out.print("Insert song where ? : ") ;
                 pos = data.nextInt() ;
-                D.front_ins( music, pos ) ;
+                // D.front_ins( music, pos ) ;
             } else if( mode.equals( "3" ) ){
                 String music ;
                 int pos ;
@@ -41,7 +53,7 @@ public class SelectMode {
                 D.show() ;
                 System.out.print("Insert song where ? : ") ;
                 pos = data.nextInt() ;
-                D.behind_ins( music, pos ) ;
+                // D.behind_ins( music, pos ) ;
             } else if( mode.equals( "4" ) ){
                 int pos ;
                 D.show( ) ;
