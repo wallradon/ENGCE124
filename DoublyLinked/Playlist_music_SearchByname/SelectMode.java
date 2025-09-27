@@ -15,12 +15,12 @@ public class SelectMode {
         System.out.println();
         while(end_pg){
             System.out.println(
-                "1 : Add Music to Playlist\n" +
+                "\n1 : Add Music to Playlist\n" +
                 "2 : Insert Music Before Selected Song\n" +
                 "3 : Insert Music After Selected Song\n" +
                 "4 : Remove Music\n" +
                 "5 : Show Playlist\n" +
-                "6 : Exit Program"
+                "6 : Exit Program\n"
             );
             System.out.println();
             System.out.println("Select Mode: " ) ;
@@ -46,10 +46,10 @@ public class SelectMode {
                 System.out.print("How long is this song? : ") ;
                 length = data.nextLine() ;
                 information info = new information(name, artist, album, length ) ;
-                int pos ;
+                String pos ;
                 D.show() ;
                 System.out.print("Insert song where ? : ") ;
-                pos = data.nextInt() ;
+                pos = data.nextLine() ;
                 D.front_ins( info, pos ) ;
             } else if( mode.equals( "3" ) ){
                 System.out.print("What name song will u Insert ? : ") ;
@@ -61,17 +61,17 @@ public class SelectMode {
                 System.out.print("How long is this song? : ") ;
                 length = data.nextLine() ;
                 information info = new information(name, artist, album, length ) ;
-                int pos ;
+                String pos ;
                 D.show() ;
                 System.out.print("Insert song where ? : ") ;
-                pos = data.nextInt() ;
+                pos = data.nextLine() ;
                 D.behind_ins( info, pos ) ;
             } else if( mode.equals( "4" ) ){
                 int pos ;
                 D.show( ) ;
                 System.out.print( "What music would you like to remove ? : ") ;
                 pos = data.nextInt( ) ;
-                D.remove(pos) ;
+                // D.remove(pos) ;
                 D.show( ) ;
             } else if( mode.equals("5") ){
                 D.show() ;
