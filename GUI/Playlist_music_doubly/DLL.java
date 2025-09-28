@@ -1,6 +1,4 @@
-package playlist;
-
-import javax.swing.JOptionPane;
+import javax.swing.JOptionPane ;
 
 public class DLL {
     DNode head, tail, chack;
@@ -160,10 +158,10 @@ public class DLL {
         return null;
     } // end mathod
     
-    Boolean checkDuplicate( String ref ) {
+    Boolean checkDuplicate( String ref_name, String ref_artist, String ref_album ) {
         DNode temp = head ;
         while(temp != null ) {
-            if(temp.info.name.equals(ref)){
+            if(temp.info.name.equals(ref_name) && temp.info.artist.equals(ref_artist) && temp.info.album.equals(ref_album) ){
                 return false ;
             }else{
                 temp = temp.Rlink ;

@@ -1,4 +1,4 @@
-package playlist;
+
 public class information {
     String name ;
     String artist ;
