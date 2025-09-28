@@ -1,0 +1,175 @@
+package playlist;
+
+import javax.swing.JOptionPane;
+
+public class DLL {
+    DNode head, tail, chack;
+    int count = 0;
+
+    void add(information item) {
+        DNode newnode = new DNode();
+        newnode.info = item;
+        if (count == 0) {
+            head = newnode;
+            tail = newnode;
+            count++;
+        } else {
+            tail.Rlink = newnode;
+            newnode.Llink = tail;
+            tail = newnode;
+            count++;
+        } // end if
+        System.out.println( "Add succeed");
+
+    }// end add
+
+    void front_ins(information item, String ref) {
+        DNode pos = SearchData(ref);
+        DNode newnode = new DNode();
+        newnode.info = item;
+        if (pos != null) {
+            if (ref.equals(head.info.name)) {
+                newnode.Rlink = head;
+                head.Llink = newnode;
+                head = newnode;
+                count++;
+            } else {
+                newnode.Rlink = pos;
+                newnode.Llink = pos.Llink;
+                pos.Llink = newnode;
+                newnode.Llink.Rlink = newnode;
+                count++;
+            } // end if
+            System.out.println("insert succeed");
+        } else {
+            System.out.println("insert Failed") ;
+            return ;
+        } // end if
+    }// end mathod
+
+    void behind_ins(information item, String ref) {
+        DNode pos = SearchData(ref);
+        DNode newnode = new DNode();
+        newnode.info = item;
+
+        if (pos != null) {
+            if (ref.equals(tail.info.name)) {
+                /* behind head */
+                tail.Rlink = newnode;
+                newnode.Llink = tail;
+                tail = newnode;
+                count++;
+            } else {
+                newnode.Rlink = pos.Rlink;
+                newnode.Llink = pos;
+                pos.Rlink.Llink = newnode;
+                pos.Rlink = newnode;
+                count++;
+            } // end if
+            System.out.println("insert succeed");
+        } // end if
+
+    }// end mathod
+
+    void remove(String pos) {
+        
+        DNode ref = SearchData(pos);
+        if (ref == null) {
+            System.out.println("Don't have data ! ");
+            JOptionPane.showMessageDialog(null, "Don't have data ! ", "Alert",JOptionPane.WARNING_MESSAGE)  ; 
+            return;
+        }
+        if (pos.equals(head.info.name)) {
+            
+            if (count > 1) {
+                head = ref.Rlink;
+                head.Llink = null;
+                count--;
+            } else if (count == 1) {
+                head = null;
+                tail = null;
+                count--;
+            } // end if
+        } else if (pos.equals(tail.info.name)) {
+            
+            tail = ref.Llink;
+            tail.Rlink = null;
+            count--;
+        } else {
+            ref.Llink.Rlink = ref.Rlink;
+            ref.Rlink.Llink = ref.Llink;
+            ref.Rlink = null;
+            ref.Llink = null;
+            count--;
+        } // end if
+        System.out.println("Remove succeed");
+    }// end mathod
+
+    void show() {
+        chack = head;
+        int number = 0;
+
+        if (chack == null) {
+            System.out.println("Node don't have data");
+            return;
+        } // end if
+        System.out.println();
+        while (chack != null) {
+            number++;
+            System.out.println(number + ". Music name : " + chack.info.name);
+            chack = chack.Rlink;
+        } // end loop
+        System.out.println();
+    }// end mathod
+
+    void showAll() {
+        chack = head;
+        int number = 0;
+
+        if (chack == null) {
+            System.out.println("Node don't have data");
+            return;
+        } // end if
+        System.out.println();
+        while (chack != null) {
+            number++;
+            System.out.println(
+                    number + ". " +
+                    "Name: " + chack.info.name + " | " +
+                    "Artist: " + chack.info.artist + " | " +
+                    "Album: " + chack.info.album + " | " +
+                    "Length: " + chack.info.length
+            ) ;
+            chack = chack.Rlink;
+        } // end loop
+        System.out.println();
+    }// end mathod
+
+    DNode SearchData(String ref) {
+        DNode node;
+        node = head;
+        if (node == null) {
+            return null;
+        } // end if
+        for (int i = 0; i < count; i++) {
+            if (ref.equals(node.info.name)) {
+                return node;
+            }
+            node = node.Rlink;
+        } // end for
+        return null;
+    } // end mathod
+    
+    Boolean checkDuplicate( String ref ) {
+        DNode temp = head ;
+        while(temp != null ) {
+            if(temp.info.name.equals(ref)){
+                return false ;
+            }else{
+                temp = temp.Rlink ;
+            }
+        }
+        return true ;
+    }//end checDuplicate
+
+}// end class
