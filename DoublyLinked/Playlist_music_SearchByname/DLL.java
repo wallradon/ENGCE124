@@ -15,8 +15,7 @@ public class DLL {
             tail = newnode;
             count++;
         } // end if
-
-        System.out.println();
+        System.out.println( "Add succeed");
 
     }// end add
 
@@ -30,19 +29,17 @@ public class DLL {
                 head.Llink = newnode;
                 head = newnode;
                 count++;
-                System.out.println("insert sucuccd");
-                show();
             } else {
                 newnode.Rlink = pos;
                 newnode.Llink = pos.Llink;
                 pos.Llink = newnode;
                 newnode.Llink.Rlink = newnode;
                 count++;
-                System.out.println("insert succeed");
-                show();
             } // end if
+            System.out.println("insert succeed");
         } else {
-            System.out.println("insert Failed");
+            System.out.println("insert Failed") ;
+            return ;
         } // end if
     }// end mathod
 
@@ -100,6 +97,7 @@ public class DLL {
             ref.Llink = null;
             count--;
         } // end if
+        System.out.println("Remove succeed");
     }// end mathod
 
     void show() {
